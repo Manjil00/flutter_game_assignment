@@ -36,7 +36,7 @@ class _PickANumberScreenState extends State<PickANumberScreen> {
   void _pickNumber(int number) {
     setState(() {
       _isButtonDisabled = true;
-      if (number == _firstNumber || number == _secondNumber) {
+      if ( _firstNumber>_secondNumber || _secondNumber>_firstNumber) {
         _score++;
       }
       if (_round < 10) {
